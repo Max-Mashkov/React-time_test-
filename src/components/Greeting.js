@@ -1,2 +1,3 @@
 import React from 'react';
-export const element = <h2>Hello:</h2>;
+export function showHello () {
+return <h2>Hello:</h2>;}
