@@ -1,12 +1,18 @@
 import React from 'react';
+//Style
+import 'normalize.css';
 //Parts
-import { Time } from '../components/Time';
 import { Header } from '../components/Header/Header';
+import { Time } from '../components/Time/Time';
+import {element as Hello} from '../components/UserName';
+import {element as UserName} from '../components/UserName';
+
 export function App() {
     return (
-        <main>
+        <header>
             <Header />
             <Time />
-        </main>
+        </header>
+
     )
 }

@@ -1,4 +1,168 @@
 @import "../../_helpers/variables";
-.header {
-    background: $bgColor;
+@import "../../_helpers/mixins";
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
 }
+.header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: $headerBgColor;
+    height: 118px;
+    @media (max-width: 768px) {
+        height: 59px;
+    }
+
+    .logo {
+        width: 345px;
+        height: 100%;
+        background: transparent;
+        display: flex;
+        justify-content: flex-start;
+        @media (max-width: 1270px) {
+            width: 250px;
+        }
+        @media (max-width: 992px) {
+            width: 150px;
+        }
+
+        &__icon {
+            margin: 35px 0 0 15px;
+            float: left;
+            width: 64px;
+            height: 57px;
+            @media (max-width: 1270px) {
+                margin: auto 0 auto 15px;
+            }
+            @media (max-width: 992px) {
+                width: 54px;
+                height: 47px;
+            }
+            @media (max-width: 768px) {
+                width: 44px;
+                height: 37px;
+            }
+        }
+
+        &__text {
+            @include fontStyle('Calibri', sans-serif, 20px, white, bold);
+            margin-left: 26px;
+            margin-top: 45px;
+            cursor: default;
+            @media (max-width: 1270px) {
+                margin: auto 0 auto 26px;
+            }
+            @media (max-width: 992px) {
+                margin: auto 0 auto 10px;
+                font-size: 16px;
+            }
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        width: 1095px;
+        height: 100%;
+
+        .tel_number_container {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            height: 50%;
+            background: transparent;
+
+            .tel_number {
+                display: flex;
+                align-items: flex-end;
+                margin: 0;
+
+                &__text {
+                    @include fontStyle('Tahoma', sans-serif, 20px, white, bold);
+                    line-height: 20px;
+                    letter-spacing: 0.030em;
+                    margin: 0 15px 3px 15px;
+                    @media (max-width: 992px) {
+                        margin: 0 15px 3px 5px;
+                        font-size: 16px;
+                    }
+                    @media (max-width: 768px) {
+                        margin: auto 15px auto 3px;
+                        font-size: 13px;
+                    }
+                }
+
+                &__icon {
+                    @media (max-width: 768px) {
+                        border-style: none;
+                        width: 20px;
+                        height: 20px;
+                        margin: auto;
+                    }
+                }
+            }
+        }
+
+        .menu {
+            display: flex;
+            width: 100%;
+            height: 50%;
+            justify-content: flex-end;
+
+            &__row {
+                display: flex;
+                margin: auto 15px auto 0;
+            }
+
+            &__item {
+                list-style: none;
+                display: flex;
+                margin-left: 30px;
+                @media (max-width: 1270px) {
+                    padding-left: 10px;
+                    margin: 0;
+                    height: 100%;
+                }
+                @media (max-width: 992px) {
+                    font-size: 18px;
+                }
+                @media (max-width: 768px) {
+                    font-size: 13px;
+                }
+            }
+
+            &__link {
+                @include fontStyle('Calibri', sans-serif, 24px, #494848, bold);
+                letter-spacing: 0.030em;
+                text-decoration: none;
+
+                &:hover {
+                    color: white;
+                    transition: color .3s ease-in-out;
+                }
+            }
+
+            &__icon {
+                @media (max-width: 768px) {
+                    width: 10px;
+                    height: 11px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
