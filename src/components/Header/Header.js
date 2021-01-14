@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
+
 //styles
 import style from './Header.module.scss';
 import logo from './img/logo.png';
 import phone_square from './img/phone_square.png';
 import down_arrow from './img/down_arrow.png';
+
+//parts
+import { Entry } from '../Entry';
 
 export class Header extends Component {
     render() {
@@ -20,6 +24,9 @@ export class Header extends Component {
                             <img src={phone_square} alt="Icon" />
                                 <figcaption className={style.tel_number__text}>80300 5000</figcaption>
                         </figure>
+        {/*------------------------------------------ПОДКЛЮЧЕНИЕ КНОПКИ--------------------------------------------------------------------------------------------*/}
+                        <Entry />
+
                     </div>
                     <nav className={style.menu}>
                         <ul className={style.menu__row}>

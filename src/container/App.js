@@ -6,7 +6,7 @@ import { Header } from '../components/Header/Header';
 import { Time } from '../components/Time/Time';
 import { showHello as Hello} from '../components/Greeting';
 import {ShowUserName as UserName} from '../components/UserName';
-
+import { Entry } from '../components/Entry';
 export function App() {
     return (
         <header>
@@ -14,6 +14,7 @@ export function App() {
             <Time />
             <Hello/>
             <UserName/>
+
         </header>
 
     )
