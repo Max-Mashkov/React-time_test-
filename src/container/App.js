@@ -10,7 +10,7 @@ export function App() {
     return (
         <header>
             <Header />
-            <Time />
+            <Time newDate={'August 19, 1992 05:00:00'}/>
             <Hello/>
             <UserName/>
 

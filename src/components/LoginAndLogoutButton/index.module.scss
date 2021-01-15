@@ -11,9 +11,11 @@
   margin-top: 34px;
   border-style: none;
   cursor: pointer;
+  animation: Bored 3s ease-in infinite;
   @include fontStyle('Tahoma', sans-serif, 20px, #494848, bold);
   &:hover {
-    color: grey;
+    color: white;
     transition: color .3s ease-in-out;
   }
+
 }

@@ -26,8 +26,8 @@ export class Entry extends Component {
         return (
             <div>
                 {isLoggedIn
-                    ? <LoginAndLogoutButton text={'Выйти'} onClick={this.logoutClick}/>
-                    : <LoginAndLogoutButton text={'Войти'} onClick={this.loginClick}/>}
+                    ? <LoginAndLogoutButton text={'Exit'} onClick={this.logoutClick}/>
+                    : <LoginAndLogoutButton text={'Entry'} onClick={this.loginClick}/>}
             </div>
 
         )

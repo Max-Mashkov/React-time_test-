@@ -4,7 +4,7 @@ import { App  } from './container/App';
 
 
 
-setInterval(
-    () => {
-        ReactDOM.render(<App/>, document.getElementById('name'));
-    },1000)
+        ReactDOM.render(
+            <App/>,
+            document.getElementById('name')
+);
