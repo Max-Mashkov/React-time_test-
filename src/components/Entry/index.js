@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
+//Style
 
-//parts
-import  LoginAndLogoutButton from "./LoginAndLogoutButton";
 
-export  class Entry extends Component {
+//Parts
+import LoginAndLogoutButton from "../LoginAndLogoutButton";
+
+export class Entry extends Component {
     constructor(props) {
         super(props);
         this.loginClick = this.handleLoginClick.bind(this);
@@ -11,21 +13,23 @@ export  class Entry extends Component {
         this.state = {isLoggedIn: true}
     }
 
-    handleLoginClick() {
+    handleLogoutClick() {
         this.setState({isLoggedIn: false})
     }
-    handleLogoutClick() {
+
+    handleLoginClick() {
         this.setState({isLoggedIn: true})
     }
 
     render() {
         const {isLoggedIn} = this.state;
-        return(
+        return (
             <div>
-            {isLoggedIn
-            ? <LoginAndLogoutButton text={'Exit'} onClick={this.logoutClick}/>
-            : <LoginAndLogoutButton text={'Enter'} onClick={this.loginClick}/>}
+                {isLoggedIn
+                    ? <LoginAndLogoutButton text={'Выйти'} onClick={this.logoutClick}/>
+                    : <LoginAndLogoutButton text={'Войти'} onClick={this.loginClick}/>}
             </div>
+
         )
     }
 }

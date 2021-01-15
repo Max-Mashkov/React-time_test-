@@ -1,0 +1,19 @@
+@import "../../_helpers/variables";
+@import "../../_helpers/mixins";
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+.logButton {
+  background: transparent;
+  margin-top: 34px;
+  border-style: none;
+  cursor: pointer;
+  @include fontStyle('Tahoma', sans-serif, 20px, #494848, bold);
+  &:hover {
+    color: grey;
+    transition: color .3s ease-in-out;
+  }
+}
